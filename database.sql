@@ -19,10 +19,10 @@ JOIN products ON warehouse_product.product_id = products.id
 WHERE description = 'diet pepsi'; 
 
 -- task #5
-SELECT customers.first_name, COUNT (*) FROM orders
+SELECT customers.first_name, customers.last_name, COUNT (*) FROM orders
 JOIN addresses ON orders.address_id = addresses.id
 JOIN customers ON addresses.customer_id = customers.id 
-GROUP BY customers.first_name;
+GROUP BY customers.id;
 
 --task #6
 
